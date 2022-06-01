@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const Header = () => {
-    return (
-        <div>
-            <Link to="/">HOME</Link>
-            <span> | </span>
-            <Link to="/login">Login</Link>
-        </div>
-    )
-};
+function Header() {
+  return (
+    <header>
+      <nav>
+        <Link to="/">Home</Link>
+        <span> | </span>
+        <Link to="/login">Login</Link>
+      </nav>
+    </header>
+  );
+}
 
 export default Header;
