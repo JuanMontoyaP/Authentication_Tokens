@@ -11,14 +11,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <AuthProvider>
-          <Routes>
-            <Route exact path="/" element={<PrivateRoute />}>
-              <Route exact path="/" element={<HomePage />} />
-            </Route>
-            <Route path="/login" element={<LoginPage />} />
-          </Routes>
+          <Header />
+            <Routes>
+              <Route exact path="/" element={<PrivateRoute />}>
+                <Route exact path="/" element={<HomePage />} />
+              </Route>
+              <Route path="/login" element={<LoginPage />} />
+            </Routes>
         </AuthProvider>
       </Router>
     </div>

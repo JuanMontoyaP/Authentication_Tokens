@@ -30,7 +30,7 @@ export function AuthProvider({ children }) {
 
   const contextData = {
     user:user,
-    loginUser: loginUser,
+    loginUser: loginUser
   };
 
   return (
