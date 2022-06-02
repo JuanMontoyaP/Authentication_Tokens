@@ -7,6 +7,7 @@ function HomePage() {
 
   useEffect(() => {
     getNotes();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   let getNotes = async() =>{
@@ -16,7 +17,7 @@ function HomePage() {
             'Content-Type':'application/json',
             'Authorization':'Bearer ' + String(authTokens.access)
         }
-    })
+    })  
     let data = await response.json()
 
     if(response.status === 200){
@@ -24,8 +25,7 @@ function HomePage() {
     }else if(response.statusText === 'Unauthorized'){
         logoutUser()
     }
-    
-}
+  };
 
   return (
     <div>
