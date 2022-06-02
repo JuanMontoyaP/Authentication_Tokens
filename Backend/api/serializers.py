@@ -1,6 +1,7 @@
-
+from rest_framework.serializers import ModelSerializer
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
+from base.models import Note
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
@@ -12,3 +13,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         # ...
 
         return token
+
+class NoteSerializer(ModelSerializer):
+    class Meta:
+        model = Note
+        fields = '__all__'
