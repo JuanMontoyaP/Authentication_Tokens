@@ -87,7 +87,7 @@ export function AuthProvider({ children }) {
     }, fourMinutes);
     return () => clearInterval(interval);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [authTokens]);
+  }, [authTokens, loading]);
 
   return (
     <AuthContext.Provider value={ contextData }>
