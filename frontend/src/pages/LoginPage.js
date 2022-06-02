@@ -3,7 +3,6 @@ import AuthContext from '../context/AuthContext'
 
 function LoginPage() {
   let {loginUser} = useContext(AuthContext)
-  console.log('context', loginUser);
   return (
     <div>
       <form onSubmit={loginUser} >
